@@ -46,3 +46,5 @@
     mask-image:none;
   }
 }
+
+.button svg,.text-link svg{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}.text-link svg{width:14px;height:14px}
