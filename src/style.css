@@ -8,3 +8,9 @@
 .about-photo img{object-position:50% 62%}
 
 @media(max-width:700px){.hero-art img{object-position:52% 60%;transform:scale(1.04)}}
+
+/* Work gallery: equal frames and full, uncropped source images. */
+.gallery{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.gallery-item:nth-child(1),.gallery-item:nth-child(2),.gallery-item:nth-child(3){height:420px;background:#15110f}
+.gallery-item img{object-fit:contain;object-position:center}
+@media(max-width:700px){.gallery-item:nth-child(1),.gallery-item:nth-child(2),.gallery-item:nth-child(3){height:390px}}
