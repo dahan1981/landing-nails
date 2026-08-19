@@ -50,6 +50,10 @@
 /* Preserve every source image while giving portrait assets an intentional full-bleed stage. */
 .gallery-item{isolation:isolate;background:#28211e}.gallery-item::before{content:'';position:absolute;z-index:0;inset:-30px;background:var(--work-image) center/cover no-repeat;filter:blur(28px) brightness(.52) saturate(.72);transform:scale(1.12)}.gallery-item::after{content:'';position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(18,14,13,.08),rgba(18,14,13,.32))}.gallery-item img{position:relative;z-index:2}.gallery-item span{z-index:3}.item-a{--work-image:url('/images/work-01.jpg')}.item-b{--work-image:url('/images/work-02.jpg')}.item-c{--work-image:url('/images/work-03.webp')}
 
+/* Strip carousel: the photos are the carousel, without a surrounding stage. */
+.gallery{gap:17px}.gallery-item{flex:0 0 calc((100% - 34px)/3);isolation:auto;background:transparent}.gallery-item:nth-child(1),.gallery-item:nth-child(2),.gallery-item:nth-child(3){height:430px}.gallery-item::before,.gallery-item::after{display:none}.gallery-item img{position:static;z-index:auto;object-fit:cover}.gallery-item span{z-index:auto}.gallery-controls{display:none}
+@media(max-width:700px){.gallery{gap:12px}.gallery-item{flex:0 0 76vw}.gallery-item:nth-child(1),.gallery-item:nth-child(2),.gallery-item:nth-child(3){height:410px}}
+
 .button svg,.text-link svg{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}.text-link svg{width:14px;height:14px}
 
 /* Editorial CTA treatment: contrast from type and border, never a heavy fill. */
