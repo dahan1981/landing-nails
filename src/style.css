@@ -48,3 +48,6 @@
 }
 
 .button svg,.text-link svg{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}.text-link svg{width:14px;height:14px}
+
+/* Editorial CTA treatment: contrast from type and border, never a heavy fill. */
+.button,.button-dark,.button-light{background:transparent;border:1px solid currentColor;color:var(--ink)}.button:hover{background:transparent;transform:translateY(-3px);opacity:.64}.closing .button-light{color:var(--paper)}
